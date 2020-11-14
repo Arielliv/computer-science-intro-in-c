@@ -1,0 +1,3 @@
+/Users/ariell/CLionProjects/leson1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ariell/CLionProjects/leson1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ariell/CLionProjects/leson1/cmake-build-debug/CMakeFiles/leson1.dir
