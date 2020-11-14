@@ -1,12 +1,119 @@
 /*315363366*/
 
 #define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdbool.h>
+
+#define WATER_BOTTLE 1
+#define ORANGE_JUICE_BOTTLE 2
+#define APPLE_JUICE_BOTTLE 3
+#define SPRITE_BOTTLE 4
+#define COLA_BOTTLE 5
 
 #define WATER_PRICE 9
 #define ORANGE_JUICE_OR_APPLE_JUICE_PRICE 8
 #define SPRITE_OR_COLA_PRICE 4
+
+/* get change amount and prints the change amount in coins view*/
+void printChangeCoins(int changeAmount) {
+    int oneCoinsAmount = 0, twoCoinsAmount = 0, fiveCoinsAmount = 0, tenCoinsAmount = 0;
+    int sum = 0;
+
+    if (changeAmount == 0) {
+        printf("Thank you for buying!\n");
+    } else {
+        while (sum < changeAmount) {
+            if (sum + 10 <= changeAmount) {
+                tenCoinsAmount++;
+                sum += 10;
+            } else if (sum + 5 <= changeAmount) {
+                fiveCoinsAmount++;
+                sum += 5;
+            } else if (sum + 2 <= changeAmount) {
+                twoCoinsAmount++;
+                sum += 2;
+            } else if (sum + 1 <= changeAmount) {
+                oneCoinsAmount++;
+                sum += 1;
+            }
+        }
+        printf("You get back (1, 2, 5, 10): %d %d %d %d\nThank you for buying!\n", oneCoinsAmount, twoCoinsAmount,
+               fiveCoinsAmount, tenCoinsAmount);
+    }
+}
+
+/*get coins and return amount in number*/
+int getTotalCoinsAmount(int oneCoinsAmount, int twoCoinsAmount,
+                        int fiveCoinsAmount, int tenCoinsAmount) {
+    int totalAmount = 0;
+    /*checks if oneCoinsAmount bigger then 0 and count how many*/
+    if (oneCoinsAmount > 0) {
+        for (int i = 0; i < oneCoinsAmount; ++i) {
+            totalAmount++;
+        }
+    }
+
+    /*checks if twoCoinsAmount bigger then 0 and count how many*/
+    if (twoCoinsAmount > 0) {
+        for (int i = 0; i < twoCoinsAmount; ++i) {
+            totalAmount += 2;
+        }
+    }
+
+    /*checks if fiveCoinsAmount bigger then 0 and count how many*/
+    if (fiveCoinsAmount > 0) {
+        for (int i = 0; i < fiveCoinsAmount; ++i) {
+            totalAmount += 5;
+        }
+    }
+
+    /*checks if tenCoinsAmount bigger then 0 and count how many*/
+    if (tenCoinsAmount > 0) {
+        for (int i = 0; i < tenCoinsAmount; ++i) {
+            totalAmount += 10;
+        }
+    }
+
+    return totalAmount;
+}
+
+/*calc the change amount*/
+int getChangeAmount(int currentPrice, int totalAmount) {
+    return (totalAmount - currentPrice);
+}
+
+/* get current bottle price and handles payment process*/
+void pay(int currentPrice) {
+    int oneCoinsAmount = 0, twoCoinsAmount = 0, fiveCoinsAmount = 0, tenCoinsAmount = 0, totalAmount = 0;
+    bool isPaymentProcessFinished = false;
+
+    int changeAmount;
+
+    printf("The price is %d nis.\n", currentPrice);
+    while (!isPaymentProcessFinished) {
+        printf("To pay please enter 4 numbers. The first number is the amount of\n"
+               "1 nis coins, the second is the amount of 2 nis coins, then 5 and 10\n"
+               "Please enter payment (1, 2, 5, 10):\n");
+        scanf("%d %d %d %d", &oneCoinsAmount, &twoCoinsAmount, &fiveCoinsAmount, &tenCoinsAmount);
+
+        totalAmount += getTotalCoinsAmount(oneCoinsAmount, twoCoinsAmount,
+                                           fiveCoinsAmount, tenCoinsAmount);
+        changeAmount = getChangeAmount(currentPrice, totalAmount);
+
+        /*check if there change*/
+        if (changeAmount > 0) {
+            isPaymentProcessFinished = true;
+            printf("Your change is: %d nis.\n", changeAmount);
+            printChangeCoins(changeAmount);
+        } else if (changeAmount == 0) {
+            isPaymentProcessFinished = true;
+            printChangeCoins(changeAmount);
+        } else {
+            printf("The amount does not suffice! Please enter %d more nis.\n", -changeAmount);
+        }
+    }
+}
 
 /*This is a drink machine code.*/
 /*It prints drink choices and get number as input from user selection.*/
@@ -15,77 +122,95 @@
 /*returns change*/
 /*in case of invalid selection or no enough money throws an error*/
 void main() {
-    int drinkChoice, currentPrice, changeAmount , totalMount = 0;
-    int oneCoinsAmount, twoCoinsAmount, fiveCoinsAmount, tenCoinsAmount = 0;
+    int drinkChoice = 0, currentPrice, currentBottle;
+    int amountOfWaterBottles = 10, amountOfOrangeBottles = 10, amountOfAppleBottles = 10, amountOfColaBottles = 10, amountOfSpriteBottles = 10;
+
     bool isValid = true;
+    bool isExit = false;
 
-    printf("Please choose:\n1. Water.\n2. Orange juice.\n3. Apple juice.\n4. Sprite.\n5. Cola.\n");
-    scanf("%d", &drinkChoice);
+    while (drinkChoice != 6) {
+        printf("Please choose:\n1. Water.\n2. Orange juice.\n3. Apple juice.\n4. Sprite.\n5. Cola.\n6. exit.\n");
+        scanf("%d", &drinkChoice);
 
-    /*set current price according to user selection*/
-    switch (drinkChoice) {
-        case 1:
-            currentPrice = WATER_PRICE;
+        /*set current price and current bottle according to user selection*/
+        switch (drinkChoice) {
+            case 1:
+                currentBottle = WATER_BOTTLE;
+                currentPrice = WATER_PRICE;
+                break;
+            case 2:
+                currentBottle = ORANGE_JUICE_BOTTLE;
+                currentPrice = ORANGE_JUICE_OR_APPLE_JUICE_PRICE;
+                break;
+            case 3:
+                currentBottle = APPLE_JUICE_BOTTLE;
+                currentPrice = ORANGE_JUICE_OR_APPLE_JUICE_PRICE;
+                break;
+            case 4:
+                currentBottle = SPRITE_BOTTLE;
+                currentPrice = SPRITE_OR_COLA_PRICE;
+                break;
+            case 5:
+                currentBottle = COLA_BOTTLE;
+                currentPrice = SPRITE_OR_COLA_PRICE;
+                break;
+            case 6:
+                isExit = true;
+                break;
+            default:
+                isValid = false;
+        }
+
+        if (isExit) {
+            printf("Good bye.\n");
             break;
-        case 2:
-        case 3:
-            currentPrice = ORANGE_JUICE_OR_APPLE_JUICE_PRICE;
-            break;
-        case 4:
-        case 5:
-            currentPrice = SPRITE_OR_COLA_PRICE;
-            break;
-        default:
-            isValid = false;
-    }
-
-    /*check if valid user input and print error or current price*/
-    if (isValid){
-        printf("The price is %d nis.\n", currentPrice);
-    } else {
-        printf("Invalid choice.\n");
-        return;
-    }
-
-    printf("To pay please enter 4 numbers. The first number is the amount of\n"
-           "1 nis coins, the second is the amount of 2 nis coins, then 5 and 10\n"
-           "Please enter payment (1, 2, 5, 10):\n");
-    scanf("%d %d %d %d", &oneCoinsAmount, &twoCoinsAmount, &fiveCoinsAmount, &tenCoinsAmount);
-
-    /*checks if oneCoinsAmount bigger then 0 and count how many*/
-    if(oneCoinsAmount > 0){
-        for (int i = 0; i < oneCoinsAmount; ++i) {
-            totalMount++;
+        } else if (!isValid) {
+            printf("Invalid choice.\n");
+        } else {
+            switch (currentBottle) {
+                case 1:
+                    if (amountOfWaterBottles == 0) {
+                        printf("There are no bottles of water left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfWaterBottles--;
+                    }
+                    break;
+                case 2:
+                    if (amountOfOrangeBottles == 0) {
+                        printf("There are no bottles of orange juice left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfOrangeBottles--;
+                    }
+                    break;
+                case 3:
+                    if (amountOfAppleBottles == 0) {
+                        printf("There are no bottles of apple juice left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfAppleBottles--;
+                    }
+                    break;
+                case 4:
+                    if (amountOfSpriteBottles == 0) {
+                        printf("There are no bottles of sprite left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfSpriteBottles--;
+                    }
+                    break;
+                case 5:
+                    if (amountOfColaBottles == 0) {
+                        printf("There are no bottles of cola left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfColaBottles--;
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
-    }
-
-    /*checks if twoCoinsAmount bigger then 0 and count how many*/
-    if(twoCoinsAmount > 0){
-        for (int i = 0; i < twoCoinsAmount; ++i) {
-            totalMount += 2;
-        }
-    }
-
-    /*checks if fiveCoinsAmount bigger then 0 and count how many*/
-    if(fiveCoinsAmount > 0){
-        for (int i = 0; i < fiveCoinsAmount; ++i) {
-            totalMount += 5;
-        }
-    }
-
-    /*checks if tenCoinsAmount bigger then 0 and count how many*/
-    if(tenCoinsAmount > 0){
-        for (int i = 0; i < tenCoinsAmount; ++i) {
-            totalMount += 10;
-        }
-    }
-
-    changeAmount = totalMount - currentPrice;
-
-    /*check if there change*/
-    if(changeAmount >=  0){
-        printf("Your change is: %d nis.", changeAmount);
-    } else {
-        printf("The amount does not suffice!");
     }
 }
