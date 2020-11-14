@@ -5,12 +5,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define WATER_BOTTLE 1
-#define ORANGE_JUICE_BOTTLE 2
-#define APPLE_JUICE_BOTTLE 3
-#define SPRITE_BOTTLE 4
-#define COLA_BOTTLE 5
-
 #define WATER_PRICE 9
 #define ORANGE_JUICE_OR_APPLE_JUICE_PRICE 8
 #define SPRITE_OR_COLA_PRICE 4
@@ -122,7 +116,7 @@ void pay(int currentPrice) {
 /*returns change*/
 /*in case of invalid selection or no enough money throws an error*/
 void main() {
-    int drinkChoice = 0, currentPrice, currentBottle;
+    int drinkChoice = 0, currentPrice;
     int amountOfWaterBottles = 10, amountOfOrangeBottles = 10, amountOfAppleBottles = 10, amountOfColaBottles = 10, amountOfSpriteBottles = 10;
 
     bool isValid = true;
@@ -135,82 +129,57 @@ void main() {
         /*set current price and current bottle according to user selection*/
         switch (drinkChoice) {
             case 1:
-                currentBottle = WATER_BOTTLE;
                 currentPrice = WATER_PRICE;
+                if (amountOfWaterBottles == 0) {
+                    printf("There are no bottles of water left.\n");
+                } else {
+                    pay(currentPrice);
+                    amountOfWaterBottles--;
+                }
                 break;
             case 2:
-                currentBottle = ORANGE_JUICE_BOTTLE;
                 currentPrice = ORANGE_JUICE_OR_APPLE_JUICE_PRICE;
+                if (amountOfOrangeBottles == 0) {
+                    printf("There are no bottles of orange juice left.\n");
+                } else {
+                    pay(currentPrice);
+                    amountOfOrangeBottles--;
+                }
                 break;
             case 3:
-                currentBottle = APPLE_JUICE_BOTTLE;
                 currentPrice = ORANGE_JUICE_OR_APPLE_JUICE_PRICE;
+                if (amountOfAppleBottles == 0) {
+                    printf("There are no bottles of apple juice left.\n");
+                } else {
+                    pay(currentPrice);
+                    amountOfAppleBottles--;
+                }
                 break;
             case 4:
-                currentBottle = SPRITE_BOTTLE;
                 currentPrice = SPRITE_OR_COLA_PRICE;
+                if (amountOfSpriteBottles == 0) {
+                    printf("There are no bottles of sprite left.\n");
+                } else {
+                    pay(currentPrice);
+                    amountOfSpriteBottles--;
+                }
                 break;
             case 5:
-                currentBottle = COLA_BOTTLE;
                 currentPrice = SPRITE_OR_COLA_PRICE;
+                if (amountOfColaBottles == 0) {
+                    printf("There are no bottles of cola left.\n");
+                } else {
+                    pay(currentPrice);
+                    amountOfColaBottles--;
+                }
                 break;
             case 6:
                 isExit = true;
+                printf("Good bye.\n");
                 break;
             default:
                 isValid = false;
-        }
-
-        if (isExit) {
-            printf("Good bye.\n");
-            break;
-        } else if (!isValid) {
-            printf("Invalid choice.\n");
-        } else {
-            switch (currentBottle) {
-                case 1:
-                    if (amountOfWaterBottles == 0) {
-                        printf("There are no bottles of water left.\n");
-                    } else {
-                        pay(currentPrice);
-                        amountOfWaterBottles--;
-                    }
-                    break;
-                case 2:
-                    if (amountOfOrangeBottles == 0) {
-                        printf("There are no bottles of orange juice left.\n");
-                    } else {
-                        pay(currentPrice);
-                        amountOfOrangeBottles--;
-                    }
-                    break;
-                case 3:
-                    if (amountOfAppleBottles == 0) {
-                        printf("There are no bottles of apple juice left.\n");
-                    } else {
-                        pay(currentPrice);
-                        amountOfAppleBottles--;
-                    }
-                    break;
-                case 4:
-                    if (amountOfSpriteBottles == 0) {
-                        printf("There are no bottles of sprite left.\n");
-                    } else {
-                        pay(currentPrice);
-                        amountOfSpriteBottles--;
-                    }
-                    break;
-                case 5:
-                    if (amountOfColaBottles == 0) {
-                        printf("There are no bottles of cola left.\n");
-                    } else {
-                        pay(currentPrice);
-                        amountOfColaBottles--;
-                    }
-                    break;
-                default:
-                    break;
-            }
+                printf("Invalid choice.\n");
         }
     }
 }
