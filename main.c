@@ -6,8 +6,10 @@
 #include <stdbool.h>
 
 #define WATER_PRICE 9
-#define ORANGE_JUICE_OR_APPLE_JUICE_PRICE 8
-#define SPRITE_OR_COLA_PRICE 4
+#define ORANGE_JUICE_PRICE 8
+#define APPLE_JUICE_PRICE 8
+#define SPRITE_PRICE 4
+#define COLA_PRICE 4
 
 /* get change amount and prints the change amount in coins view*/
 void printChangeCoins(int changeAmount);
@@ -48,7 +50,7 @@ void main() {
                 }
                 break;
             case 2:
-                currentPrice = ORANGE_JUICE_OR_APPLE_JUICE_PRICE;
+                currentPrice = ORANGE_JUICE_PRICE;
                 if (amountOfOrangeBottles == 0) {
                     printf("There are no bottles of orange juice left.\n");
                 } else {
@@ -57,7 +59,7 @@ void main() {
                 }
                 break;
             case 3:
-                currentPrice = ORANGE_JUICE_OR_APPLE_JUICE_PRICE;
+                currentPrice = APPLE_JUICE_PRICE;
                 if (amountOfAppleBottles == 0) {
                     printf("There are no bottles of apple juice left.\n");
                 } else {
@@ -66,7 +68,7 @@ void main() {
                 }
                 break;
             case 4:
-                currentPrice = SPRITE_OR_COLA_PRICE;
+                currentPrice = SPRITE_PRICE;
                 if (amountOfSpriteBottles == 0) {
                     printf("There are no bottles of sprite left.\n");
                 } else {
@@ -75,7 +77,7 @@ void main() {
                 }
                 break;
             case 5:
-                currentPrice = SPRITE_OR_COLA_PRICE;
+                currentPrice = COLA_PRICE;
                 if (amountOfColaBottles == 0) {
                     printf("There are no bottles of cola left.\n");
                 } else {
@@ -124,30 +126,22 @@ int getTotalCoinsAmount(int oneCoinsAmount, int twoCoinsAmount,
     int totalAmount = 0;
     /*checks if oneCoinsAmount bigger then 0 and count how many*/
     if (oneCoinsAmount > 0) {
-        for (int i = 0; i < oneCoinsAmount; ++i) {
-            totalAmount++;
-        }
+        totalAmount += oneCoinsAmount * 1;
     }
 
     /*checks if twoCoinsAmount bigger then 0 and count how many*/
     if (twoCoinsAmount > 0) {
-        for (int i = 0; i < twoCoinsAmount; ++i) {
-            totalAmount += 2;
-        }
+        totalAmount += twoCoinsAmount * 2;
     }
 
     /*checks if fiveCoinsAmount bigger then 0 and count how many*/
     if (fiveCoinsAmount > 0) {
-        for (int i = 0; i < fiveCoinsAmount; ++i) {
-            totalAmount += 5;
-        }
+        totalAmount += fiveCoinsAmount * 5;
     }
 
     /*checks if tenCoinsAmount bigger then 0 and count how many*/
     if (tenCoinsAmount > 0) {
-        for (int i = 0; i < tenCoinsAmount; ++i) {
-            totalAmount += 10;
-        }
+        totalAmount += tenCoinsAmount * 10;
     }
 
     return totalAmount;
