@@ -11,6 +11,14 @@
 #define SPRITE_PRICE 4
 #define COLA_PRICE 4
 
+
+#define WATER_SHAPE_SIGN 'W'
+#define ORANGE_JUICE_SHAPE_SIGN 'O'
+#define APPLE_JUICE_SHAPE_SIGN 'A'
+#define SPRITE_SHAPE_SIGN 'S'
+#define COLA_UPPER_CASE_SHAPE_SIGN 'C'
+#define COLA_UPPER_LOWER_SHAPE_SIGN 'c'
+
 /* get change amount and prints the change amount in coins view*/
 void printChangeCoins(int changeAmount);
 
@@ -24,74 +32,114 @@ int getChangeAmount(int currentPrice, int totalAmount);
 /* get current bottle price and handles payment process*/
 void pay(int currentPrice);
 
+/*get shape size and prints water drew*/
+void printWater(int shapeSize);
+
+/*get shape size and prints orange drew*/
+void printOrangeJuice(int shapeSize);
+
+/*get shape size and prints apple drew*/
+void printAppleJuice(int shapeSize);
+
+/*get shape size and prints sprite drew*/
+void printSprite(int shapeSize);
+
+/*get shape size and prints cola drew*/
+void printCola(int shapeSize);
+
+/*get shape size, shape sign and weather should the half pyramid should start at right direction or not - and prints half pyramid drew*/
+void printHalfPyramid(int shapeSize, char shapeSign, bool shouldStartAtRight);
+
+/*get shape size, shape sign and prints pyramid drew*/
+void printPyramid(int shapeSize, char shapeSign);
+
+/*get shape size, shape sign and prints down side pyramid drew*/
+void printDownSidePyramid(int shapeSize, char shapeSign);
+
 /*This is a drink machine code.*/
 /*It prints drink choices and get number as input from user selection.*/
 /*It prints the price of the user selection drink and expect to get 4 numbers as amount of user money he pays*/
 /*(amount of one coins, amount of two coins, amount of five coins, amount of ten coins).*/
 /*returns change*/
 /*in case of invalid selection or no enough money throws an error*/
+/*in case of invalid drew size - finish the code run */
 void main() {
-    int drinkChoice = 0, currentPrice;
+    int drinkChoice = 0, drawSizeChoice = 0, currentPrice;
     int amountOfWaterBottles = 10, amountOfOrangeBottles = 10, amountOfAppleBottles = 10, amountOfColaBottles = 10, amountOfSpriteBottles = 10;
 
-    while (drinkChoice != 6) {
-        printf("Please choose:\n1. Water.\n2. Orange juice.\n3. Apple juice.\n4. Sprite.\n5. Cola.\n6. exit.\n");
-        scanf("%d", &drinkChoice);
+    printf("Please enter drawing's size:");
+    scanf("%d", &drawSizeChoice);
 
-        /*set current price and current bottle according to user selection*/
-        switch (drinkChoice) {
-            case 1:
-                currentPrice = WATER_PRICE;
-                if (amountOfWaterBottles == 0) {
-                    printf("There are no bottles of water left.\n");
-                } else {
-                    pay(currentPrice);
-                    amountOfWaterBottles--;
-                }
-                break;
-            case 2:
-                currentPrice = ORANGE_JUICE_PRICE;
-                if (amountOfOrangeBottles == 0) {
-                    printf("There are no bottles of orange juice left.\n");
-                } else {
-                    pay(currentPrice);
-                    amountOfOrangeBottles--;
-                }
-                break;
-            case 3:
-                currentPrice = APPLE_JUICE_PRICE;
-                if (amountOfAppleBottles == 0) {
-                    printf("There are no bottles of apple juice left.\n");
-                } else {
-                    pay(currentPrice);
-                    amountOfAppleBottles--;
-                }
-                break;
-            case 4:
-                currentPrice = SPRITE_PRICE;
-                if (amountOfSpriteBottles == 0) {
-                    printf("There are no bottles of sprite left.\n");
-                } else {
-                    pay(currentPrice);
-                    amountOfSpriteBottles--;
-                }
-                break;
-            case 5:
-                currentPrice = COLA_PRICE;
-                if (amountOfColaBottles == 0) {
-                    printf("There are no bottles of cola left.\n");
-                } else {
-                    pay(currentPrice);
-                    amountOfColaBottles--;
-                }
-                break;
-            case 6:
-                printf("Good bye.\n");
-                break;
-            default:
-                printf("Invalid choice.\n");
+    /*checks if drawSizeChoice has valid number*/
+    if (drawSizeChoice > 0) {
+        while (drinkChoice != 6) {
+            printf("********************\n* Please choose:   *\n* 1. Water.        *\n* 2. Orange juice. *\n* 3. Apple juice.  *\n* 4. Sprite.       *\n* 5. Cola.         *\n* 6. exit.         *\n********************\n");
+            scanf("%d", &drinkChoice);
+
+            /*set current price and current bottle according to user selection*/
+            switch (drinkChoice) {
+                case 1:
+                    currentPrice = WATER_PRICE;
+                    if (amountOfWaterBottles == 0) {
+                        printf("There are no bottles of water left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfWaterBottles--;
+                        printWater(drawSizeChoice);
+                    }
+                    break;
+                case 2:
+                    currentPrice = ORANGE_JUICE_PRICE;
+                    if (amountOfOrangeBottles == 0) {
+                        printf("There are no bottles of orange juice left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfOrangeBottles--;
+                        printOrangeJuice(drawSizeChoice);
+                    }
+                    break;
+                case 3:
+                    currentPrice = APPLE_JUICE_PRICE;
+                    if (amountOfAppleBottles == 0) {
+                        printf("There are no bottles of apple juice left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfAppleBottles--;
+                        printAppleJuice(drawSizeChoice);
+                    }
+                    break;
+                case 4:
+                    currentPrice = SPRITE_PRICE;
+                    if (amountOfSpriteBottles == 0) {
+                        printf("There are no bottles of sprite left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfSpriteBottles--;
+                        printSprite(drawSizeChoice);
+                    }
+                    break;
+                case 5:
+                    currentPrice = COLA_PRICE;
+                    if (amountOfColaBottles == 0) {
+                        printf("There are no bottles of cola left.\n");
+                    } else {
+                        pay(currentPrice);
+                        amountOfColaBottles--;
+                        printCola(drawSizeChoice);
+                    }
+                    break;
+                case 6:
+                    printf("Good bye.\n");
+                    break;
+                default:
+                    printf("Invalid choice.\n");
+            }
         }
+    } else {
+        printf("Invalid size.");
+        return;
     }
+
 }
 
 void printChangeCoins(int changeAmount) {
@@ -179,5 +227,91 @@ void pay(int currentPrice) {
         } else {
             printf("The amount does not suffice! Please enter %d more nis.\n", -changeAmount);
         }
+    }
+}
+
+
+void printWater(int number) {
+    int i, j;
+    for (i = 0; i < number * 2; ++i) {
+        for (j = 0; j < number; ++j) {
+            if ((i == number - 1 || i == number) && number != 1) {
+                if (j == 0) {
+                    printf("%c ", WATER_SHAPE_SIGN);
+                } else if (j == number - 1) {
+                    printf(" %c", WATER_SHAPE_SIGN);
+                } else {
+                    printf("  ");
+                }
+            } else {
+                printf("%c%c", WATER_SHAPE_SIGN, WATER_SHAPE_SIGN);
+            }
+        }
+        printf("\n");
+    }
+}
+
+void printOrangeJuice(int shapeSize) {
+    printHalfPyramid(shapeSize, ORANGE_JUICE_SHAPE_SIGN, false);
+}
+
+
+void printAppleJuice(int shapeSize) {
+    printHalfPyramid(shapeSize, APPLE_JUICE_SHAPE_SIGN, true);
+}
+
+void printSprite(int shapeSize) {
+    printPyramid(shapeSize, SPRITE_SHAPE_SIGN);
+}
+
+void printCola(int shapeSize) {
+    printDownSidePyramid(shapeSize, COLA_UPPER_CASE_SHAPE_SIGN);
+    printPyramid(shapeSize, COLA_UPPER_LOWER_SHAPE_SIGN);
+}
+
+void printHalfPyramid(int shapeSize, char shapeSign, bool shouldStartAtRight) {
+    int i, j;
+    for (i = 0; i <= shapeSize; ++i) {
+        for (j = 0; j < shapeSize; ++j) {
+            if (shouldStartAtRight) {
+                if (j >= shapeSize - i) {
+                    printf("%c", shapeSign);
+                } else {
+                    printf(" ");
+                }
+            } else {
+                if (j <= i - 1) {
+                    printf("%c", shapeSign);
+                } else {
+                    printf(" ");
+                }
+            }
+        }
+        printf("\n");
+    }
+}
+
+void printPyramid(int shapeSize, char shapeSign) {
+    for (int i = 1; i <= shapeSize; i++) {
+        for (int space = 1; space <= shapeSize - i; space++) {
+            printf(" ");
+        }
+        for (int symbol = 1; symbol <= (i * 2 - 1); symbol++) {
+            printf("%c", shapeSign);
+        }
+        printf("\n");
+    }
+}
+
+void printDownSidePyramid(int shapeSize, char shapeSign) {
+    int i, j;
+    for (i = shapeSize; i > 0; i--) {
+        for (j = shapeSize; j > i; j--) {
+            printf(" ");
+        }
+        for (j = 1; j < i * 2; j++) {
+            printf("%c", shapeSign);
+        }
+        printf("\n");
     }
 }
