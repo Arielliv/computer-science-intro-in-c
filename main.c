@@ -139,31 +139,23 @@ void main() {
         printf("Invalid size.");
         return;
     }
-
 }
 
 void printChangeCoins(int changeAmount) {
     int oneCoinsAmount = 0, twoCoinsAmount = 0, fiveCoinsAmount = 0, tenCoinsAmount = 0;
-    int sum = 0;
 
     if (changeAmount == 0) {
         printf("Thank you for buying!\n");
     } else {
-        while (sum < changeAmount) {
-            if (sum + 10 <= changeAmount) {
-                tenCoinsAmount++;
-                sum += 10;
-            } else if (sum + 5 <= changeAmount) {
-                fiveCoinsAmount++;
-                sum += 5;
-            } else if (sum + 2 <= changeAmount) {
-                twoCoinsAmount++;
-                sum += 2;
-            } else if (sum + 1 <= changeAmount) {
-                oneCoinsAmount++;
-                sum += 1;
-            }
-        }
+        tenCoinsAmount = changeAmount / 10;
+        changeAmount = (changeAmount % 10);
+
+        fiveCoinsAmount = changeAmount / 5;
+        changeAmount = (changeAmount % 5);
+
+        twoCoinsAmount = changeAmount / 2;
+        oneCoinsAmount = changeAmount % 2;
+
         printf("You get back (1, 2, 5, 10): %d %d %d %d\nThank you for buying!\n", oneCoinsAmount, twoCoinsAmount,
                fiveCoinsAmount, tenCoinsAmount);
     }
@@ -172,25 +164,11 @@ void printChangeCoins(int changeAmount) {
 int getTotalCoinsAmount(int oneCoinsAmount, int twoCoinsAmount,
                         int fiveCoinsAmount, int tenCoinsAmount) {
     int totalAmount = 0;
-    /*checks if oneCoinsAmount bigger then 0 and count how many*/
-    if (oneCoinsAmount > 0) {
-        totalAmount += oneCoinsAmount * 1;
-    }
 
-    /*checks if twoCoinsAmount bigger then 0 and count how many*/
-    if (twoCoinsAmount > 0) {
-        totalAmount += twoCoinsAmount * 2;
-    }
-
-    /*checks if fiveCoinsAmount bigger then 0 and count how many*/
-    if (fiveCoinsAmount > 0) {
-        totalAmount += fiveCoinsAmount * 5;
-    }
-
-    /*checks if tenCoinsAmount bigger then 0 and count how many*/
-    if (tenCoinsAmount > 0) {
-        totalAmount += tenCoinsAmount * 10;
-    }
+    totalAmount += oneCoinsAmount * 1;
+    totalAmount += twoCoinsAmount * 2;
+    totalAmount += fiveCoinsAmount * 5;
+    totalAmount += tenCoinsAmount * 10;
 
     return totalAmount;
 }
