@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/ariell/CLionProjects/minesweeper/main.c
+/Users/ariell/Education/intro-to-c/minesweeper/main.c
 stdio.h
 -
 stdlib.h

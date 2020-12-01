@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ariell/CLionProjects/minesweeper
+# Install script for directory: /Users/ariell/Education/intro-to-c/minesweeper
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ariell/CLionProjects/minesweeper/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/ariell/Education/intro-to-c/minesweeper/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
