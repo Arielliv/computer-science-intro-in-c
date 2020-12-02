@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 
 #define NUMBER_OF_MINES 8
 #define NUMBER_OF_COLS 10
@@ -53,6 +54,7 @@ bool checkIfWonTheGame(bool mineSweeperBoardStatus[][NUMBER_OF_COLS], int boardS
 // check if cell in board is a mine
 bool isInsideMineArray(int minePlaces[][2], int minePlacesRows, int minePlacesCols, int currentRow, int currentCol);
 
+// a code of mine sweeper game
 int main() {
     bool isWin = false;
     bool isLose = false;
@@ -63,7 +65,8 @@ int main() {
     char mineSweeperBoard[rows][cols];
     bool mineSweeperBoardStatus[rows][cols];
     int minePlaces[NUMBER_OF_MINES][2];
-
+    // Use current time as seed for random generator
+    srand(time(NULL));
     boardSizeChoice = getUserBoardSizeChoice();
 
     if ((boardSizeChoice >= 0 && boardSizeChoice < 5)) {
