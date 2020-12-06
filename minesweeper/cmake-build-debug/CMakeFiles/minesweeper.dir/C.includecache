@@ -11,8 +11,6 @@ stdio.h
 -
 stdlib.h
 -
-stdbool.h
--
 time.h
 -
 
