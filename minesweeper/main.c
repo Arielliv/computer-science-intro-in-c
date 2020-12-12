@@ -98,7 +98,7 @@ int main() {
 
             printMineSweeperBoardView(mineSweeperBoard, rows, cols);
 
-            while (isWin == 0 && isLose == 0) {
+            while (isWin == 0 && isLose != 1) {
                 isLose = handleUserCellSelection(mineSweeperBoard, rows, cols,
                                                  minePlaces,
                                                  NUMBER_OF_MINES,
@@ -145,13 +145,10 @@ void initMineSweeperBoard(int mineSweeperBoardView[][NUMBER_OF_COLS], int rows, 
                           int minePlaces[][2],
                           int minePlacesRows, int minePlacesCols) {
     int i, y;
-    for (i = 0; i < rows; i++) {
-        for (y = 0; y < cols; y++) {
-            if (isInsideMineArray(minePlaces, minePlacesRows, minePlacesCols, i, y) == 1) {
-                mineSweeperBoardView[i][y] = 9;
-            }
-        }
+    for (i = 0; i < minePlacesRows; i++) {
+        mineSweeperBoardView[minePlaces[i][0]][minePlaces[i][1]] = 9;
     }
+
     for (i = 0; i < rows; i++) {
         for (y = 0; y < cols; y++) {
 

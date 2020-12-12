@@ -29,11 +29,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb1815b-edab-46a9-a1a4-700c07e6e0fb" name="Default Changelist" comment="big refactor in order to be more efficiente">
+    <list default="true" id="9eb1815b-edab-46a9-a1a4-700c07e6e0fb" name="Default Changelist" comment="created fake user input function">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intro-to-c.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/recursive-tasks.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper/cmake-build-debug/minesweeper" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/cmake-build-debug/minesweeper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +81,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -93,7 +109,7 @@
       <workItem from="1606735720369" duration="4286000" />
       <workItem from="1606892795672" duration="1177000" />
       <workItem from="1607242305241" duration="1373000" />
-      <workItem from="1607630865687" duration="10216000" />
+      <workItem from="1607630865687" duration="10958000" />
     </task>
     <task id="LOCAL-00001" summary="add comments and a bit of refactoring">
       <created>1606815489033</created>
@@ -123,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607770553175</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="created fake user input function">
+      <created>1607773794347</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607773794347</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,58 +169,63 @@
     <MESSAGE value="fixed rand and a comments" />
     <MESSAGE value="removed usage of bool" />
     <MESSAGE value="big refactor in order to be more efficiente" />
-    <option name="LAST_COMMIT_MESSAGE" value="big refactor in order to be more efficiente" />
+    <MESSAGE value="created fake user input function" />
+    <option name="LAST_COMMIT_MESSAGE" value="created fake user input function" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2104" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607774701682">
+      <screen x="1680" y="-127" width="1920" height="1177" />
+    </state>
+    <state x="2104" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774701682" />
     <state x="1780" y="-27" width="1720" height="977" key="DiffContextDialog" timestamp="1607705611787">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state x="1780" y="-27" width="1720" height="977" key="DiffContextDialog/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607705611787" />
-    <state width="1878" height="291" key="GridCell.Tab.0.bottom" timestamp="1607773754771">
+    <state width="1878" height="406" key="GridCell.Tab.0.bottom" timestamp="1607774712048">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399562" />
-    <state width="1878" height="291" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773754771" />
+    <state width="1878" height="406" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712048" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755822" />
-    <state width="1878" height="291" key="GridCell.Tab.0.center" timestamp="1607773754770">
+    <state width="1878" height="406" key="GridCell.Tab.0.center" timestamp="1607774712047">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399561" />
-    <state width="1878" height="291" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773754770" />
+    <state width="1878" height="406" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712047" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755821" />
-    <state width="1878" height="291" key="GridCell.Tab.0.left" timestamp="1607773754769">
+    <state width="1878" height="406" key="GridCell.Tab.0.left" timestamp="1607774712046">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399560" />
-    <state width="1878" height="291" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773754769" />
+    <state width="1878" height="406" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712046" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755820" />
-    <state width="1878" height="291" key="GridCell.Tab.0.right" timestamp="1607773754771">
+    <state width="1878" height="406" key="GridCell.Tab.0.right" timestamp="1607774712048">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399561" />
-    <state width="1878" height="291" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773754771" />
+    <state width="1878" height="406" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712048" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755821" />
-    <state width="1878" height="406" key="GridCell.Tab.1.bottom" timestamp="1607773438967">
+    <state width="1878" height="406" key="GridCell.Tab.1.bottom" timestamp="1607774712049">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773438967" />
-    <state width="1878" height="406" key="GridCell.Tab.1.center" timestamp="1607773438967">
+    <state width="1878" height="406" key="GridCell.Tab.1.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712049" />
+    <state width="1878" height="406" key="GridCell.Tab.1.center" timestamp="1607774712048">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773438967" />
-    <state width="1878" height="406" key="GridCell.Tab.1.left" timestamp="1607773438966">
+    <state width="1878" height="406" key="GridCell.Tab.1.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712048" />
+    <state width="1878" height="406" key="GridCell.Tab.1.left" timestamp="1607774712048">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773438966" />
-    <state width="1878" height="406" key="GridCell.Tab.1.right" timestamp="1607773438967">
+    <state width="1878" height="406" key="GridCell.Tab.1.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712048" />
+    <state width="1878" height="406" key="GridCell.Tab.1.right" timestamp="1607774712049">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773438967" />
-    <state x="2240" y="201" key="Vcs.Push.Dialog.v2" timestamp="1607770567642">
+    <state width="1878" height="406" key="GridCell.Tab.1.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712049" />
+    <state x="2240" y="201" key="Vcs.Push.Dialog.v2" timestamp="1607773797952">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state x="490" y="309" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893478714" />
-    <state x="2240" y="201" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607770567642" />
+    <state x="2240" y="201" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773797952" />
     <state x="560" y="351" key="Vcs.Push.Dialog.v2/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606815493588" />
     <state x="538" y="125" width="604" height="822" key="find.popup" timestamp="1606765561992">
       <screen x="0" y="23" width="1680" height="1027" />
