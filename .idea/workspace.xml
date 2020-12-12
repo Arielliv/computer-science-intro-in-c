@@ -29,9 +29,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb1815b-edab-46a9-a1a4-700c07e6e0fb" name="Default Changelist" comment="fixed rand and a comments">
+    <list default="true" id="9eb1815b-edab-46a9-a1a4-700c07e6e0fb" name="Default Changelist" comment="removed usage of bool">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/minesweeper.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper/cmake-build-debug/minesweeper" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/cmake-build-debug/minesweeper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minesweeper/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/main.c" afterDir="false" />
@@ -42,6 +41,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
@@ -70,6 +70,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="minesweeper" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minesweeper" TARGET_NAME="minesweeper" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minesweeper" RUN_TARGET_NAME="minesweeper">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -87,7 +92,8 @@
       <workItem from="1606735357937" duration="317000" />
       <workItem from="1606735720369" duration="4286000" />
       <workItem from="1606892795672" duration="1177000" />
-      <workItem from="1607242305241" duration="486000" />
+      <workItem from="1607242305241" duration="1373000" />
+      <workItem from="1607630865687" duration="6769000" />
     </task>
     <task id="LOCAL-00001" summary="add comments and a bit of refactoring">
       <created>1606815489033</created>
@@ -103,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606893469701</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed usage of bool">
+      <created>1607242803095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607242803095</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,37 +137,43 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add comments and a bit of refactoring" />
     <MESSAGE value="fixed rand and a comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed rand and a comments" />
+    <MESSAGE value="removed usage of bool" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed usage of bool" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="247" key="GridCell.Tab.0.bottom" timestamp="1606904755822">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state x="1780" y="-27" width="1720" height="977" key="DiffContextDialog" timestamp="1607705611787">
+      <screen x="1680" y="-127" width="1920" height="1177" />
+    </state>
+    <state x="1780" y="-27" width="1720" height="977" key="DiffContextDialog/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607705611787" />
+    <state width="1878" height="291" key="GridCell.Tab.0.bottom" timestamp="1607770279114">
+      <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399562" />
-    <state width="1878" height="197" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1606766586458" />
+    <state width="1878" height="291" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607770279114" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755822" />
-    <state width="1638" height="247" key="GridCell.Tab.0.center" timestamp="1606904755821">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1878" height="291" key="GridCell.Tab.0.center" timestamp="1607770279113">
+      <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399561" />
-    <state width="1878" height="197" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1606766586457" />
+    <state width="1878" height="291" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607770279113" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755821" />
-    <state width="1638" height="247" key="GridCell.Tab.0.left" timestamp="1606904755820">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1878" height="291" key="GridCell.Tab.0.left" timestamp="1607770279113">
+      <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399560" />
-    <state width="1878" height="197" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1606766586456" />
+    <state width="1878" height="291" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607770279113" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755820" />
-    <state width="1638" height="247" key="GridCell.Tab.0.right" timestamp="1606904755821">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1878" height="291" key="GridCell.Tab.0.right" timestamp="1607770279114">
+      <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399561" />
-    <state width="1878" height="197" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1606766586458" />
+    <state width="1878" height="291" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607770279114" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755821" />
-    <state x="490" y="309" key="Vcs.Push.Dialog.v2" timestamp="1606893478714">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="2240" y="201" key="Vcs.Push.Dialog.v2" timestamp="1607242805984">
+      <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state x="490" y="309" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893478714" />
+    <state x="2240" y="201" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607242805984" />
     <state x="560" y="351" key="Vcs.Push.Dialog.v2/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606815493588" />
     <state x="538" y="125" width="604" height="822" key="find.popup" timestamp="1606765561992">
       <screen x="0" y="23" width="1680" height="1027" />
