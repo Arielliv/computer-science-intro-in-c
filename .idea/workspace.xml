@@ -30,21 +30,123 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eb1815b-edab-46a9-a1a4-700c07e6e0fb" name="Default Changelist" comment="created fake user input function">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/intro-to-c.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/recursive-tasks.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/minesweeper/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/task1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/main.c.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/recursive_tasks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/recursive_tasks.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/task2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/C.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/main.c.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/task2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/task2.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursive-tasks/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursive-tasks/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/.idea/task1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/task1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/task1.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/main.c" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,19 +183,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="minesweeper" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="minesweeper" TARGET_NAME="minesweeper" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="minesweeper" RUN_TARGET_NAME="minesweeper">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -110,6 +207,7 @@
       <workItem from="1606892795672" duration="1177000" />
       <workItem from="1607242305241" duration="1373000" />
       <workItem from="1607630865687" duration="10958000" />
+      <workItem from="1608049064075" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="add comments and a bit of refactoring">
       <created>1606815489033</created>
