@@ -29,124 +29,30 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb1815b-edab-46a9-a1a4-700c07e6e0fb" name="Default Changelist" comment="created fake user input function">
-      <change afterPath="$PROJECT_DIR$/minesweeper/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/task1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/C.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/main.c.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/CMakeFiles/recursive_tasks.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/recursive_tasks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/cmake-build-debug/recursive_tasks.cbp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task1/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/task2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/C.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/main.c.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/CMakeFiles/task2.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/task2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/cmake-build-debug/task2.cbp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recursive-tasks/task2/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursive-tasks/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursive-tasks/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/.idea/task1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/CMakeFiles/task1.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/task1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/cmake-build-debug/task1.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/main.c" beforeDir="false" />
+    <list default="true" id="9eb1815b-edab-46a9-a1a4-700c07e6e0fb" name="Default Changelist" comment="3 new recure tasks">
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task4/.idea/task4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task4/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task4/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task5/.idea/task5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task5/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task5/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task6/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task6/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task6/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task6/.idea/task6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task6/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task6/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recursive-tasks/task6/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursive-tasks/task3/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/recursive-tasks/task3/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,11 +94,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -208,6 +109,9 @@
       <workItem from="1607242305241" duration="1373000" />
       <workItem from="1607630865687" duration="10958000" />
       <workItem from="1608049064075" duration="60000" />
+      <workItem from="1608050920902" duration="1257000" />
+      <workItem from="1608134823763" duration="2702000" />
+      <workItem from="1608287301920" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="add comments and a bit of refactoring">
       <created>1606815489033</created>
@@ -244,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607773794347</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="3 new recure tasks">
+      <created>1608050949729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608050949729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +179,8 @@
     <MESSAGE value="removed usage of bool" />
     <MESSAGE value="big refactor in order to be more efficiente" />
     <MESSAGE value="created fake user input function" />
-    <option name="LAST_COMMIT_MESSAGE" value="created fake user input function" />
+    <MESSAGE value="3 new recure tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 new recure tasks" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2104" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607774701682">
@@ -279,29 +191,29 @@
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state x="1780" y="-27" width="1720" height="977" key="DiffContextDialog/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607705611787" />
-    <state width="1878" height="406" key="GridCell.Tab.0.bottom" timestamp="1607774712048">
+    <state width="1878" height="291" key="GridCell.Tab.0.bottom" timestamp="1608192265086">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399562" />
-    <state width="1878" height="406" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712048" />
+    <state width="1878" height="291" key="GridCell.Tab.0.bottom/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1608192265086" />
     <state width="1638" height="247" key="GridCell.Tab.0.bottom/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755822" />
-    <state width="1878" height="406" key="GridCell.Tab.0.center" timestamp="1607774712047">
+    <state width="1878" height="291" key="GridCell.Tab.0.center" timestamp="1608192265086">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399561" />
-    <state width="1878" height="406" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712047" />
+    <state width="1878" height="291" key="GridCell.Tab.0.center/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1608192265086" />
     <state width="1638" height="247" key="GridCell.Tab.0.center/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755821" />
-    <state width="1878" height="406" key="GridCell.Tab.0.left" timestamp="1607774712046">
+    <state width="1878" height="291" key="GridCell.Tab.0.left" timestamp="1608192265085">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399560" />
-    <state width="1878" height="406" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712046" />
+    <state width="1878" height="291" key="GridCell.Tab.0.left/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1608192265085" />
     <state width="1638" height="247" key="GridCell.Tab.0.left/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755820" />
-    <state width="1878" height="406" key="GridCell.Tab.0.right" timestamp="1607774712048">
+    <state width="1878" height="291" key="GridCell.Tab.0.right" timestamp="1608192265086">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893399561" />
-    <state width="1878" height="406" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712048" />
+    <state width="1878" height="291" key="GridCell.Tab.0.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1608192265086" />
     <state width="1638" height="247" key="GridCell.Tab.0.right/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606904755821" />
     <state width="1878" height="406" key="GridCell.Tab.1.bottom" timestamp="1607774712049">
       <screen x="1680" y="-127" width="1920" height="1177" />
@@ -319,11 +231,11 @@
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state width="1878" height="406" key="GridCell.Tab.1.right/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607774712049" />
-    <state x="2240" y="201" key="Vcs.Push.Dialog.v2" timestamp="1607773797952">
+    <state x="2240" y="201" key="Vcs.Push.Dialog.v2" timestamp="1608050954746">
       <screen x="1680" y="-127" width="1920" height="1177" />
     </state>
     <state x="490" y="309" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@0.23.1680.1027" timestamp="1606893478714" />
-    <state x="2240" y="201" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1607773797952" />
+    <state x="2240" y="201" key="Vcs.Push.Dialog.v2/0.23.1680.1027/1680.-127.1920.1177@1680.-127.1920.1177" timestamp="1608050954746" />
     <state x="560" y="351" key="Vcs.Push.Dialog.v2/0.23.1920.1177/-1680.23.1680.1027@0.23.1920.1177" timestamp="1606815493588" />
     <state x="538" y="125" width="604" height="822" key="find.popup" timestamp="1606765561992">
       <screen x="0" y="23" width="1680" height="1027" />
