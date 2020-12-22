@@ -7,9 +7,9 @@
 int numWays(int n);
 
 void main() {
-    int userSizeInput;
-    scanf("%d", &userSizeInput);
-    printf("%d", numWays(userSizeInput));
+    int userNumberInput;
+    scanf("%d", &userNumberInput);
+    printf("%d", numWays(userNumberInput));
 }
 
 int numWays(int n) {

@@ -7,9 +7,9 @@
 void printPrimeFactors(int num);
 
 int main() {
-    int userSizeInput;
-    scanf("%d", &userSizeInput);
-    printPrimeFactors(userSizeInput);
+    int userNumberInput;
+    scanf("%d", &userNumberInput);
+    printPrimeFactors(userNumberInput);
 }
 
 void printPrimeFactors(int num) {
