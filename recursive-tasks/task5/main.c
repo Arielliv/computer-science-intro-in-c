@@ -6,7 +6,7 @@
 
 void printPrimeFactors(int num);
 
-int main() {
+void main() {
     int userNumberInput;
     scanf("%d", &userNumberInput);
     printPrimeFactors(userNumberInput);

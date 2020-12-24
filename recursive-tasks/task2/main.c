@@ -4,13 +4,13 @@
 
 #include <stdio.h>
 
-void printPatternRowRecur(int n);
+void printAsteriskRow(int n);
 
 void printOppositeTriangles(int n);
 
 void main() {
     int userSizeInput;
-    scanf("%d",&userSizeInput);
+    scanf("%d", &userSizeInput);
     printOppositeTriangles(userSizeInput);
 }
 
@@ -19,17 +19,15 @@ void printOppositeTriangles(int n) {
     if (n < 1) {
         return;
     }
-    printPatternRowRecur(n);
-    printf("\n");
+    printAsteriskRow(n);
     printOppositeTriangles(n - 1);
-    printPatternRowRecur(n);
-    printf("\n");
+    printAsteriskRow(n);
 }
 
-void printPatternRowRecur(int n) {
-    if (n < 1) {
-        return;
+void printAsteriskRow(int n) {
+    int i;
+    for (i = 0; i < n; ++i) {
+        printf("*");
     }
-    printf("*");
-    printPatternRowRecur(n - 1);
+    printf("\n");
 }

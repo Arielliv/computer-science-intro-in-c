@@ -6,24 +6,29 @@
 
 void printRuler(int k);
 
+void printLine(int n);
+
 void main() {
-    int userSizeInput, limit;
+    int userSizeInput;
     scanf("%d", &userSizeInput);
     printRuler(userSizeInput);
 }
 
 
 void printRuler(int k) {
-    int i;
     if (k - 1 > 0) {
         printRuler(k - 1);
     }
-    for (i = 0; i < k; ++i) {
+    printLine(k);
+    if (k - 1 > 0) {
+        printRuler(k - 1);
+    }
+}
+
+void printLine(int n) {
+    int i;
+    for (i = 0; i < n; ++i) {
         printf("-");
     }
     printf("\n");
-    if (k - 1 > 0) {
-        printRuler(k - 1);
-    }
-
 }
