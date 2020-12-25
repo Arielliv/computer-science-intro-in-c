@@ -1,19 +1,23 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define USER_INPUT_SIZE 5
+
 bool subsetSum(int numbers[], int size, int sum);
 
 int main() {
-    int array[5];
+    int userInputArray[USER_INPUT_SIZE];
     int sum;
     int result;
-    int userNumberInput1, userNumberInput2, userNumberInput3, userNumberInput4, userNumberInput5;
+    int index;
 
-    scanf("%d %d %d %d %d", &userNumberInput1, &userNumberInput2, &userNumberInput3, &userNumberInput4,
-          &userNumberInput5);
+    for (index = 0; index < USER_INPUT_SIZE; ++index) {
+        scanf("%d", &userInputArray[index]);
+    }
+
     scanf("%d", &sum);
 
-    result = subsetSum(array, 5, sum) ? 1 : 0;
+    result = subsetSum(userInputArray, 5, sum) ? 1 : 0;
     printf("%d", result);
 }
 

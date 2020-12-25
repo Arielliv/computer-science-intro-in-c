@@ -17,11 +17,14 @@ void main() {
 }
 
 void intToStr(unsigned int num, char s[]) {
-    if (num <= 0) {
+    if (num / 10 == 0) {
+        s[0] = (char) (num) + '0';
+        s[1] = '\0';
         return;
     }
-    int currentNumber = (num % 10);
     intToStr(num / 10, s);
-    s[strlen(s)] = (char) currentNumber + '0';
-    s[strlen(s) + 1] = '\0';
+    int currentNumber = (num % 10);
+    int lastIndex = strlen(s);
+    s[lastIndex] = (char) (currentNumber) + '0';
+    s[lastIndex + 1] = '\0';
 }

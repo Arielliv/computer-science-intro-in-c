@@ -26,6 +26,10 @@
 #define UN_CLICKED_SIGN 'X'
 #define FLAG_SIGN 'F'
 
+// start the game, print when lose and win
+void startGame(int mineSweeperBoard[][NUMBER_OF_COLS], int rows, int cols, int minePlaces[][2], double mineArrayRows,
+               int mineArrayCols);
+
 // get user board choice - prints menu and get user selection ( for first part only 1 and 0 works )
 int getUserBoardSizeChoice(int *rows, int *cols, double *numberOfMines);
 
@@ -34,6 +38,9 @@ int isCellRevealed(int val);
 
 // check if cell is a mine, return (1 - true or 0 - false) value
 int isACellMine(int val);
+
+// check if cell is a empty, return (1 - true or 0 - false) value
+int isCellEmpty(int val);
 
 // initiate min sweeper board with mines and calculated cells
 void initMineSweeperBoard(int mineSweeperBoard[][NUMBER_OF_COLS], int rows, int cols, int minePlaces[][2],
@@ -95,13 +102,10 @@ int isInsideMineArray(int minePlaces[][2], double minePlacesRows, int minePlaces
 
 // a code of mine sweeper game
 int main() {
-    int isWin = 0, isLose = 0;
     int boardSizeChoice = -1;
     int rows = 0, cols = 0;
     double numberOfMines = MAX_NUMBER_OF_MINES;
-
     int mineSweeperBoard[NUMBER_OF_ROWS][NUMBER_OF_COLS];
-
     int minePlaces[MAX_NUMBER_OF_MINES][2];
 
     // Use current time as seed for random generator
@@ -116,25 +120,30 @@ int main() {
         if (boardSizeChoice == 0) {
             printf("Bye");
         } else {
-            fillWithMines(minePlaces, numberOfMines, 2);
-            initMineSweeperBoard(mineSweeperBoard, rows, cols, minePlaces, numberOfMines, 2);
-
-            printMineSweeperBoardView(mineSweeperBoard, rows, cols);
-
-            while (isWin == 0 && isLose != 1) {
-                isLose = handleUserCellSelection(mineSweeperBoard, rows, cols,
-                                                 minePlaces,
-                                                 numberOfMines,
-                                                 2);
-                isWin = checkIfWonTheGame(mineSweeperBoard, rows, cols);
-            }
-
-            if (isLose == 1) {
-                printf("You've hit a bomb! Game over!");
-            } else if (isWin == 1) {
-                printf("You wom!! congratulations! CHAMPION!");
-            }
+            startGame(mineSweeperBoard, rows, cols, minePlaces, numberOfMines, 2);
         }
+    }
+}
+
+void startGame(int mineSweeperBoard[][NUMBER_OF_COLS], int rows, int cols, int minePlaces[][2], double mineArrayRows,
+               int mineArrayCols) {
+    int isWin = 0, isLose = 0;
+    fillWithMines(minePlaces, mineArrayRows, mineArrayCols);
+    initMineSweeperBoard(mineSweeperBoard, rows, cols, minePlaces, mineArrayRows, mineArrayCols);
+    printMineSweeperBoardView(mineSweeperBoard, rows, cols);
+
+    while (isWin == 0 && isLose != 1) {
+        isLose = handleUserCellSelection(mineSweeperBoard, rows, cols,
+                                         minePlaces,
+                                         mineArrayRows,
+                                         mineArrayCols);
+        isWin = checkIfWonTheGame(mineSweeperBoard, rows, cols);
+    }
+
+    if (isLose == 1) {
+        printf("You've hit a bomb! Game over!");
+    } else if (isWin == 1) {
+        printf("You wom!! congratulations! CHAMPION!");
     }
 }
 
@@ -156,29 +165,33 @@ int getUserBoardSizeChoice(int *rows, int *cols, double *numberOfMines) {
            "0 - Exit");
 
     scanf("%d", &boardSizeChoice);
-    if (boardSizeChoice == 1) {
-        *rows = NUMBER_OF_ROWS_OPTION_1;
-        *cols = NUMBER_OF_COLS_OPTION_1;
-        *numberOfMines = NUMBER_OF_MINES_OPTION_1;
-    }
-    if (boardSizeChoice == 2) {
-        *rows = NUMBER_OF_ROWS_OPTION_2;
-        *cols = NUMBER_OF_COLS_OPTION_2;
-        *numberOfMines = NUMBER_OF_MINES_OPTION_2;
-    }
-    if (boardSizeChoice == 3) {
-        *rows = NUMBER_OF_ROWS_OPTION_3;
-        *cols = NUMBER_OF_COLS_OPTION_3;
-        *numberOfMines = NUMBER_OF_MINES_OPTION_3;
-    }
-    if (boardSizeChoice == 4) {
-        printf("Please enter the size of the board (Lines <= 22 and Cols <= 22  ):\n");
-        scanf("%d %d", &rowsUserInput, &colsUserInput);
-        if (rowsUserInput > 0 && rowsUserInput < 23 && colsUserInput > 0 && colsUserInput < 23) {
-            *rows = rowsUserInput + 2;
-            *cols = colsUserInput + 2;
-            *numberOfMines = sqrt(colsUserInput * rowsUserInput);
-        }
+    switch (boardSizeChoice) {
+        case 1:
+            *rows = NUMBER_OF_ROWS_OPTION_1;
+            *cols = NUMBER_OF_COLS_OPTION_1;
+            *numberOfMines = NUMBER_OF_MINES_OPTION_1;
+            break;
+        case 2:
+            *rows = NUMBER_OF_ROWS_OPTION_2;
+            *cols = NUMBER_OF_COLS_OPTION_2;
+            *numberOfMines = NUMBER_OF_MINES_OPTION_2;
+            break;
+        case 3:
+            *rows = NUMBER_OF_ROWS_OPTION_3;
+            *cols = NUMBER_OF_COLS_OPTION_3;
+            *numberOfMines = NUMBER_OF_MINES_OPTION_3;
+            break;
+        case 4:
+            printf("Please enter the size of the board (Lines <= 22 and Cols <= 22  ):\n");
+            scanf("%d %d", &rowsUserInput, &colsUserInput);
+            if (rowsUserInput > 0 && rowsUserInput < 23 && colsUserInput > 0 && colsUserInput < 23) {
+                *rows = rowsUserInput + 2;
+                *cols = colsUserInput + 2;
+                *numberOfMines = sqrt(colsUserInput * rowsUserInput);
+            }
+            break;
+        default:
+            break;
     }
     return boardSizeChoice;
 }
@@ -196,6 +209,7 @@ void initMineSweeperBoard(int mineSweeperBoardView[][NUMBER_OF_COLS], int rows, 
 
             // get cell score -  how many mines around it
             int cellScore = calcNumberOfMinesAroundCell(mineSweeperBoardView, rows, cols, i, y);
+            // 9 represents mine
             if (cellScore != 9) {
                 mineSweeperBoardView[i][y] = cellScore;
             }
@@ -261,9 +275,12 @@ void printHeaderOfBoard(int numberOfCells) {
 
 void fillWithMines(int minePlaces[][2], double rows, int cols) {
     int i;
+    int randomX, randomY;
     for (i = 0; i < rows; i++) {
-        minePlaces[i][0] = 1 + rand() % ((int) rows);
-        minePlaces[i][1] = 1 + rand() % ((int) rows);
+        randomX = 1 + rand() % ((int) rows);
+        randomY = 1 + rand() % ((int) rows);
+        minePlaces[i][0] = randomX;
+        minePlaces[i][1] = randomY;
     }
 }
 
@@ -307,6 +324,14 @@ int isACellMine(int val) {
     }
 }
 
+int isCellEmpty(int val) {
+    if (val % 10 == 0)
+        return 1;
+    else {
+        return 0;
+    }
+}
+
 char toLowerCase(char c) {
     return c |= ' ';
 };
@@ -317,13 +342,15 @@ int handleUserCellSelection(int mineSweeperBoardView[][NUMBER_OF_COLS], int rows
     char chosenInteraction;
 
     printf("Please enter your move, row and column :");
-    scanf("%d %d %c", &chosenRow, &chosenCol, &chosenInteraction);
-    chosenInteraction = toLowerCase(chosenInteraction);
+    scanf("%d %d", &chosenRow, &chosenCol);
 
     if (chosenRow == -1) {
         return userFakeInput(chosenCol, mineSweeperBoardView, rows, cols, minePlaces, minePlacesRows,
                              minePlacesCols);
     } else {
+        scanf(" %c", &chosenInteraction);
+        // In  case character is upper case
+        chosenInteraction = toLowerCase(chosenInteraction);
         // add 1 to user selection because the board starts at 1 and not 0
         chosenRow += 1;
         chosenCol += 1;
@@ -337,14 +364,21 @@ int handleUserCellSelection(int mineSweeperBoardView[][NUMBER_OF_COLS], int rows
 void openCell(int chosenRow, int chosenCol, int mineSweeperBoard[][NUMBER_OF_COLS],
               int rows, int cols, int minePlaces[][2],
               double minePlacesRows, int minePlacesCols) {
+    int isRevealed, isEmpty;
+    // check if cell already open
+    isRevealed = isCellRevealed(mineSweeperBoard[chosenRow][chosenCol]);
 
-    int isRevealed = isCellRevealed(mineSweeperBoard[chosenRow][chosenCol]);
+    // if cell is not revealed and in boundaries
     if (chosenRow > 0 && chosenCol > 0 && rows - 2 >= chosenRow && cols - 2 >= chosenCol &&
         isRevealed == 0) {
-        int isEmpty = mineSweeperBoard[chosenRow][chosenCol] % 10 == 0 ? 1 : 0;
+
         if (mineSweeperBoard[chosenRow][chosenCol] >= 0) {
             mineSweeperBoard[chosenRow][chosenCol] += 10;
         }
+        // check if cell is empty
+        isEmpty = isCellEmpty(mineSweeperBoard[chosenRow][chosenCol]);
+
+        //if cell empty and not a flag
         if (isEmpty == 1 && mineSweeperBoard[chosenRow][chosenCol] >= 0 &&
             mineSweeperBoard[chosenRow][chosenCol] < 20) {
 
@@ -381,20 +415,24 @@ int handleUserClick(int chosenRow, int chosenCol, char chosenInteraction, int mi
         for (i = 0; i < rows; i++) {
             for (y = 0; y < cols; y++) {
                 if (chosenRow == i && chosenCol == y) {
+                    // check if cell was already revealed
                     if (isCellRevealed(mineSweeperBoardView[i][y]) == 1) {
                         isChosenAlready = 1;
                     } else {
                         if (chosenInteraction == 'o') {
                             if (mineSweeperBoardView[i][y] < 0) {
+                                // update cell with +10 when is opened
                                 mineSweeperBoardView[i][y] += 10;
                             }
                             openCell(chosenRow, chosenCol, mineSweeperBoardView, rows, cols, minePlaces, minePlacesRows,
                                      minePlacesCols);
                         } else if (chosenInteraction == 'f') {
                             if (mineSweeperBoardView[i][y] >= 0) {
+                                // update cell with -10 when is opened
                                 mineSweeperBoardView[i][y] -= 10;
                             }
                             if (mineSweeperBoardView[i][y] >= 10) {
+                                // update cell with -20 when is already open
                                 mineSweeperBoardView[i][y] -= 20;
                             }
                         }
@@ -411,21 +449,28 @@ int handleUserClick(int chosenRow, int chosenCol, char chosenInteraction, int mi
     } else {
         printf("Please enter a valid choice!\n");
     }
-    return chosenInteraction != 'f' ? isInsideMineArray(minePlaces, minePlacesRows, minePlacesCols, chosenRow,
-                                                        chosenCol) : 0;
+
+    // checks if interaction wasn't 'f' and checks if cell was mine
+    if (chosenInteraction != 'f') {
+        return isInsideMineArray(minePlaces, minePlacesRows, minePlacesCols, chosenRow,
+                                 chosenCol);
+    } else {
+        return 0;
+    }
 }
 
 int
 userFakeInput(int numberOfMoves, int mineSweeperBoardView[][NUMBER_OF_COLS], int rows, int cols, int minePlaces[][2],
               double minePlacesRows, int minePlacesCols) {
-    int i, y, counter = numberOfMoves;
+    int i, y, counterMoves = numberOfMoves;
 
     for (i = 1; i < rows - 1 && numberOfMoves > 0; i++) {
         for (y = 1; y < cols - 1 && numberOfMoves > 0; y++) {
             if (isCellRevealed(mineSweeperBoardView[i][y]) == 0 &&
                 isInsideMineArray(minePlaces, minePlacesRows, minePlacesCols, i, y) == 0) {
+                // open cell with +10
                 mineSweeperBoardView[i][y] += 10;
-                counter--;
+                counterMoves--;
             }
         }
     }

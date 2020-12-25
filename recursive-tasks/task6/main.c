@@ -1,6 +1,7 @@
 /*315363366*/
 
 #define _CRT_SECURE_NO_WARNINGS
+#define USER_INPUT_SIZE 5
 
 #include <stdio.h>
 #include <limits.h>
@@ -8,20 +9,18 @@
 void minMax(int arr[], int left, int right, int min_max[]);
 
 void main() {
-    int arr[10];
     int min_max[2] = {INT_MAX, INT_MIN};
-    int userNumberInput1, userNumberInput2, userNumberInput3, userNumberInput4, userNumberInput5, leftIndex, rightIndex;
+    int userInputArray[USER_INPUT_SIZE];
+    int leftIndex, rightIndex;
+    int index;
 
-    scanf("%d %d %d %d %d %d %d", &userNumberInput1, &userNumberInput2, &userNumberInput3, &userNumberInput4, &userNumberInput5,
-          &leftIndex, &rightIndex);
+    for (index = 0; index < USER_INPUT_SIZE; ++index) {
+        scanf("%d", &userInputArray[index]);
+    }
 
-    arr[0] = userNumberInput1;
-    arr[1] = userNumberInput2;
-    arr[2] = userNumberInput3;
-    arr[3] = userNumberInput4;
-    arr[4] = userNumberInput5;
+    scanf("%d %d",&leftIndex, &rightIndex);
 
-    minMax(arr, leftIndex, rightIndex, min_max);
+    minMax(userInputArray, leftIndex, rightIndex, min_max);
     printf("%d %d", min_max[0], min_max[1]);
 }
 
