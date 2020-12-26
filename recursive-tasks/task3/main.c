@@ -23,6 +23,9 @@ void printRuler(int k) {
     if (k - 1 > 0) {
         printRuler(k - 1);
     }
+    if (k == 0) {
+        return;
+    }
 }
 
 void printLine(int n) {
