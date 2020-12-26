@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void intToStr(unsigned int num, char s[]);
+void intToStr(int num, char s[]);
 
 void main() {
     char s[10];
@@ -16,7 +16,7 @@ void main() {
     printf("%s", s);
 }
 
-void intToStr(unsigned int num, char s[]) {
+void intToStr(int num, char s[]) {
     if (num / 10 == 0) {
         s[0] = (char) (num) + '0';
         s[1] = '\0';

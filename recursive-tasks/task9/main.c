@@ -22,31 +22,12 @@ int main() {
 }
 
 bool subsetSum(int numbers[], int size, int sum) {
-    bool result = true;
-    int tempNumber, currentSum;
-    if (size == 1) {
-        if (numbers[0] == sum) {
-            result = true;
-        } else {
-            result = false;
-        }
-    } else {
-        if (sum == numbers[0]) {
-            result = true;
-        }
+    bool withLast, withoutLast;
 
-        for (int i = 0; i < size; ++i) {
-            tempNumber = numbers[size - 1];
-            numbers[size - 1] = numbers[i];
-            numbers[i] = tempNumber;
-            currentSum = sum - numbers[size - 1];
-            if (currentSum > 0) {
-                result = subsetSum(numbers, size - 1, currentSum);
-            }
-
-            numbers[i] = numbers[size - 1];
-            numbers[size - 1] = tempNumber;
-        }
+    if (size == 0) {
+        return (sum == 0);
     }
-    return result;
+    withLast = subsetSum(numbers, size - 1, sum - numbers[size - 1]);
+    withoutLast = subsetSum(numbers, size - 1, sum);
+    return (withLast || withoutLast);
 }
