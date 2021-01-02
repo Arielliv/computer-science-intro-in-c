@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ariell/Education/intro-to-c/snake/snippet-code/main.c
+stdio.h
+-
+stdlib.h
+-
+conio.h
+-
+windows.h
+-
+
