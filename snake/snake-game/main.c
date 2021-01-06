@@ -45,6 +45,7 @@ int playGame(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position sna
 int
 startGame(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[20], int snakeSize,
           int *eatenFoodCounter, int *isWon);
+
 // play a move according to user press (left, right, up, down) updates board view and board object - including snake view and object
 void playMove(char *choice, Position *currentPosition, char snakeBoard[][NUMBER_OF_COLS], int rows, int cols,
               Position snake[TOTAL_SNAKE_SIZE], int snakeSize,
@@ -154,7 +155,7 @@ int
 startGame(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[TOTAL_SNAKE_SIZE], int snakeSize,
           int *eatenFoodCounter,
           int *isWon) {
-    char choice = RIGHT;
+    char choice = ' ';
 
     int isLost = 0;
 
@@ -166,8 +167,11 @@ startGame(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[
 
     initGame(snakeBoard, rows, cols, snake, snakeSize);
 
-    while (choice != ESC && isLost == 0 && *isWon == 0) {
+    while (choice != UP && choice != DOWN && choice != LEFT && choice != RIGHT && choice != ESC) {
+        choice = getKey();
+    }
 
+    while (choice != ESC && isLost == 0 && *isWon == 0) {
         playMove(&choice, &currentPosition, snakeBoard, rows, cols, snake, snakeSize, eatenFoodCounter, isWon,
                  &isLost, &moves, &realSnakeSize);
     }
@@ -253,7 +257,7 @@ void playMove(char *choice, Position *currentPosition, char snakeBoard[][NUMBER_
     int shouldGrow = 0;
     Position newFoodLocation;
 
-    Sleep(500);
+    Sleep(1000);
     getMove(choice, currentPosition);
     if (checkIfPositionIsSnakeBody(snake, snakeSize, *currentPosition) == 1 || currentPosition->x >= rows - 1 ||
         currentPosition->y >= cols - 1 || currentPosition->x <= 0 ||
