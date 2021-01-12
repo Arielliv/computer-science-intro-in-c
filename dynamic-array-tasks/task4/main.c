@@ -21,6 +21,9 @@ double average(STUDENT students[], int size);
 // create new student from user input
 STUDENT getStudentData();
 
+// prints all students name who got more then `GOOD` average grade
+void printGoodStudents(STUDENT students[], int size);
+
 void main() {
     int arrayStudentSize, index;
     STUDENT *students;
@@ -34,9 +37,7 @@ void main() {
         students[index] = newStudent;
     }
 
-    printf("The average grade is: %.2lf\n", average(students, arrayStudentSize));
-
-
+    printGoodStudents(students, arrayStudentSize);
 }
 
 STUDENT getStudentData() {
@@ -56,4 +57,13 @@ double average(STUDENT students[], int size) {
         sum += students[i].averageGrade;
     }
     return sum / size;
+}
+
+void printGoodStudents(STUDENT students[], int size) {
+    int i;
+    for (i = 0; i < size; ++i) {
+        if (students[i].averageGrade > GOOD) {
+            printf("%s\n", students[i].name);
+        }
+    }
 }
