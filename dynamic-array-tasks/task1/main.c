@@ -27,6 +27,7 @@ void main() {
     scanf("%d", &k);
     result = OrderStat(inputArray, arraySize, k);
     printf("%d", result);
+    free(inputArray);
 }
 
 int OrderStat(int array[], int size, int k) {
