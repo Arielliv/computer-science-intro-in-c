@@ -76,11 +76,11 @@ void printBoard(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols);
 // prints game resolution (win or lose)
 void printGameResolution();
 
-// update snake with new position of head, delete last position according to snake size (only after 10 moves of snake in game)
-void updateSnake(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, Position newPosition, int moves);
-
 // print sign ob the board according to position
 void printSignOfPositionInGameBoard(Position position, char sign);
+
+// update snake with new position of head, delete last position according to snake size (only after 10 moves of snake in game)
+void updateSnake(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, Position newPosition, int moves);
 
 // check if ate himself (snake) return - (1 - true or 0 - false)
 int checkIfPositionIsSnakeBody(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, Position currentPosition);
@@ -103,14 +103,15 @@ void main() {
 
 }
 
-void printGameResolution(int isWon) {
-    printf("##################################\n");
-    if (isWon == 1) {
-        printf("you win!\n");
-    } else {
-        printf("GAME OVER\n");
-    }
-    printf("##################################\n");
+void gotoxy(int x, int y) {
+    printf("\x1b[%d;%df", x + 1, y + 1);
+}
+
+int getKey() {
+    char KeyStroke = _getch();
+    if (KeyStroke == 0 || KeyStroke == -32)
+        KeyStroke = _getch();
+    return (KeyStroke);
 }
 
 int getUserChoice() {
@@ -179,76 +180,6 @@ startGame(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[
     return isLost;
 }
 
-void initGame(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[TOTAL_SNAKE_SIZE], int snakeSize) {
-    initBoard(snakeBoard, rows, cols, snake, snakeSize);
-    printBoard(snakeBoard, rows, cols);
-}
-
-void initSnake(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, int boardRows, int boardCols) {
-    int i;
-    Position initPosition;
-    initPosition.x = boardRows / 2;
-    initPosition.y = boardCols / 2;
-    for (i = 0; i < snakeSize - 1; i++) {
-        snake[i] = initPosition;
-    }
-}
-
-void initBoard(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[TOTAL_SNAKE_SIZE], int snakeSize) {
-    int i, j;
-    Position foodLocation, currentPosition;
-
-    initSnake(snake, snakeSize, rows, cols);
-
-    for (i = 0; i < rows; ++i) {
-        for (j = 0; j < cols; ++j) {
-            currentPosition.x = i;
-            currentPosition.y = j;
-            if (i == 0 || j == 0 || i == rows - 1 || j == cols - 1) {
-                setSignInPositionInBoard(snakeBoard, rows, cols, currentPosition, BORD_SIGN);
-            } else {
-                setSignInPositionInBoard(snakeBoard, rows, cols, currentPosition, EMPTY_SIGN);
-            }
-        }
-    }
-
-    setRandomPosition(snake, snakeSize, &foodLocation);
-    setSignInPositionInBoard(snakeBoard, rows, cols, foodLocation, FOOD_SIGN);
-}
-
-void setRandomPosition(Position *snake, int snakeSize, Position *position) {
-    Position randomPosition;
-    randomPosition.x = randomPosition.x = 1 + rand() % ((int) NUMBER_OF_ROWS - 2);
-    randomPosition.y = randomPosition.y = 1 + rand() % ((int) NUMBER_OF_COLS - 2);
-    while (checkIfPositionIsSnakeBody(snake, snakeSize, randomPosition) == 1) {
-
-        randomPosition.x = 1 + rand() % ((int) NUMBER_OF_ROWS - 2);
-        randomPosition.y = 1 + rand() % ((int) NUMBER_OF_COLS - 2);
-    }
-    position->x = randomPosition.x;
-    position->y = randomPosition.y;
-}
-
-void setSignInPositionInBoard(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position position, char sign) {
-    snakeBoard[position.x][position.y] = sign;
-}
-
-void printSignOfPositionInGameBoard(Position position, char sign) {
-    gotoxy(position.x, position.y);
-    printf("%c", sign);
-    gotoxy(26, 81);
-}
-
-void printBoard(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols) {
-    int i, j;
-    for (i = 0; i < rows; ++i) {
-        for (j = 0; j < cols; ++j) {
-            printf("%c", snakeBoard[i][j]);
-        }
-        printf("\n");
-    }
-}
-
 void playMove(char *choice, Position *currentPosition, char snakeBoard[][NUMBER_OF_COLS], int rows, int cols,
               Position snake[TOTAL_SNAKE_SIZE], int snakeSize,
               int *eatenFoodCounter,
@@ -306,6 +237,86 @@ void getMove(char *choice, Position *currentPosition) {
     printSignOfPositionInGameBoard(*currentPosition, SNAKE_SIGN);
 }
 
+void initGame(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[TOTAL_SNAKE_SIZE], int snakeSize) {
+    initBoard(snakeBoard, rows, cols, snake, snakeSize);
+    printBoard(snakeBoard, rows, cols);
+}
+
+void initSnake(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, int boardRows, int boardCols) {
+    int i;
+    Position initPosition;
+    initPosition.x = boardRows / 2;
+    initPosition.y = boardCols / 2;
+    for (i = 0; i < snakeSize - 1; i++) {
+        snake[i] = initPosition;
+    }
+}
+
+void initBoard(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position snake[TOTAL_SNAKE_SIZE], int snakeSize) {
+    int i, j;
+    Position foodLocation, currentPosition;
+
+    initSnake(snake, snakeSize, rows, cols);
+
+    for (i = 0; i < rows; ++i) {
+        for (j = 0; j < cols; ++j) {
+            currentPosition.x = i;
+            currentPosition.y = j;
+            if (i == 0 || j == 0 || i == rows - 1 || j == cols - 1) {
+                setSignInPositionInBoard(snakeBoard, rows, cols, currentPosition, BORD_SIGN);
+            } else {
+                setSignInPositionInBoard(snakeBoard, rows, cols, currentPosition, EMPTY_SIGN);
+            }
+        }
+    }
+
+    setRandomPosition(snake, snakeSize, &foodLocation);
+    setSignInPositionInBoard(snakeBoard, rows, cols, foodLocation, FOOD_SIGN);
+}
+
+void setRandomPosition(Position *snake, int snakeSize, Position *position) {
+    Position randomPosition;
+    randomPosition.x = randomPosition.x = 1 + rand() % ((int) NUMBER_OF_ROWS - 2);
+    randomPosition.y = randomPosition.y = 1 + rand() % ((int) NUMBER_OF_COLS - 2);
+    while (checkIfPositionIsSnakeBody(snake, snakeSize, randomPosition) == 1) {
+
+        randomPosition.x = 1 + rand() % ((int) NUMBER_OF_ROWS - 2);
+        randomPosition.y = 1 + rand() % ((int) NUMBER_OF_COLS - 2);
+    }
+    position->x = randomPosition.x;
+    position->y = randomPosition.y;
+}
+
+void setSignInPositionInBoard(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position position, char sign) {
+    snakeBoard[position.x][position.y] = sign;
+}
+
+void printBoard(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols) {
+    int i, j;
+    for (i = 0; i < rows; ++i) {
+        for (j = 0; j < cols; ++j) {
+            printf("%c", snakeBoard[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void printSignOfPositionInGameBoard(Position position, char sign) {
+    gotoxy(position.x, position.y);
+    printf("%c", sign);
+    gotoxy(26, 81);
+}
+
+void printGameResolution(int isWon) {
+    printf("##################################\n");
+    if (isWon == 1) {
+        printf("you win!\n");
+    } else {
+        printf("GAME OVER\n");
+    }
+    printf("##################################\n");
+}
+
 void updateSnake(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, Position newPosition, int moves) {
     int i;
     Position lastPosition = snake[snakeSize - 1];
@@ -319,15 +330,15 @@ void updateSnake(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, Position newPo
     }
 }
 
-void gotoxy(int x, int y) {
-    printf("\x1b[%d;%df", x + 1, y + 1);
-}
-
-int getKey() {
-    char KeyStroke = _getch();
-    if (KeyStroke == 0 || KeyStroke == -32)
-        KeyStroke = _getch();
-    return (KeyStroke);
+int checkIfPositionIsSnakeBody(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, Position currentPosition) {
+    int i;
+    int isInside = 0;
+    for (i = 0; i < snakeSize - 1 && isInside == 0; i++) {
+        if (compareTwoPositions(snake[i], currentPosition) == 1) {
+            isInside = 1;
+        }
+    }
+    return isInside;
 }
 
 int checkIfEtan(char snakeBoard[][NUMBER_OF_COLS], int rows, int cols, Position currentPosition) {
@@ -346,13 +357,3 @@ int compareTwoPositions(Position position1, Position position2) {
     }
 }
 
-int checkIfPositionIsSnakeBody(Position snake[TOTAL_SNAKE_SIZE], int snakeSize, Position currentPosition) {
-    int i;
-    int isInside = 0;
-    for (i = 0; i < snakeSize - 1 && isInside == 0; i++) {
-        if (compareTwoPositions(snake[i], currentPosition) == 1) {
-            isInside = 1;
-        }
-    }
-    return isInside;
-}
