@@ -14,12 +14,18 @@ void bubbleSort(int arr[], int size);
 // swap between two places in the array
 void swap(int *index1p, int *index2p);
 
+// handle malloc failure
+void handleMallocFailure();
+
 void main() {
     int arraySize, index, k, result;
     int *inputArray;
     scanf("%d", &arraySize);
 
     inputArray = (int *) malloc(sizeof(int) * arraySize);
+    if (inputArray == NULL){
+        handleMallocFailure();
+    }
     for (index = 0; index < arraySize; ++index) {
         scanf("%d", &inputArray[index]);
     }
@@ -51,4 +57,9 @@ void swap(int *index1p, int *index2p) {
     int tmp = *index1p;
     *index1p = *index2p;
     *index2p = tmp;
+}
+
+void handleMallocFailure() {
+    printf("Memory allocation failure!!!\n");
+    exit(1);
 }
