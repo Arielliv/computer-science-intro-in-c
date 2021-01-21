@@ -5,6 +5,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+
+#define MAX_SIZE 100
 
 int binarySearchRecursive(int *array, int value, int left, int right);
 
@@ -17,6 +20,14 @@ void mergeSort(int *array, int size);
 int *mergeArrays(int *array1, int size1, int *array2, int size2);
 
 void copyArray(int *des, int *src, int size);
+
+int countRulingRows(int matNum[][MAX_SIZE], int size);
+
+void swapInArrays(int array1[], int array2[], int index);
+
+void arrangeArrays(int data1[], int data2[], int size);
+
+int gcd(int num1, int num2);
 
 void main() {
     int unSortedArray[] = {9, 1, 6, 10, 5, 3, 7, 8, 2, 4};
@@ -39,6 +50,38 @@ void main() {
     int resultIterative = binarySearchIterative(unSortedArray, 10, 10);
     printf("Recursive solution %d, actual value : %d\n", resultRecursive, unSortedArray[resultRecursive]);
     printf("Iterative solution %d, actual value : %d\n", resultIterative, unSortedArray[resultIterative]);
+
+    int mat[][MAX_SIZE] = {{1,  2,  4,  3, 2},
+                           {4,  5,  6,  5, 4},
+                           {4,  4,  6,  5, 5},
+                           {15, 20, 10, 2, 4},
+                           {15, 20, 10, 5, 5}};
+    int re = countRulingRows(mat, 5);
+    printf("%d\n", re);
+
+    int data1[] = {2, -3, 5, -7, 8};
+    int data2[] = {5, -3, 9, -9, 10};
+    printf("data1 before: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", data1[i]);
+    }
+    printf("\ndata2 before: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", data2[i]);
+    }
+    arrangeArrays(data1, data2, 5);
+
+    printf("\ndata1 after: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", data1[i]);
+    }
+    printf("\ndata2 after: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", data2[i]);
+    }
+
+    printf("\n%d", gcd(24, 36));
+    printf("\n%d", gcd(12, 17));
 }
 
 int binarySearchRecursive(int *array, int value, int left, int right) {
@@ -133,4 +176,92 @@ void copyArray(int *des, int *src, int size) {
         des[i] = src[i];
 
     }
+}
+
+
+//*********************************************************************************************************************//
+//  2015 question 3
+// first try
+//int countRulingRows(int matNum[][MAX_SIZE], int size) {
+//    int i, y, j;
+//    int counterRows = 0, counterInRows = 0, counter = 0;
+//    int comp;
+//    for (i = 1; i < size; i++) {
+//        for (y = 0; y < size; y++) {
+//            comp = matNum[i][y];
+//            for (j = i - 1; j >= 0; j--) {
+//                if (comp < matNum[j][y]) {
+//                    counter++;
+//                }
+//            }
+//            if (counter == 0) {
+//                counterInRows++;
+//            }
+//            counter = 0;
+//        }
+//        if (counterInRows == size) {
+//            counterRows++;
+//        }
+//        counterInRows = 0;
+//    }
+//    return counterRows;
+//}
+
+int countRulingRows(int matNum[][MAX_SIZE], int size) {
+    int i, y, j;
+    int maxArray[MAX_SIZE];
+    int counter = 0;
+    bool isRuling = false;
+    for (i = 0; i < size; i++) {
+        maxArray[i] = matNum[0][i];
+    }
+
+    for (y = 1; y < size; y++) {
+        isRuling = true;
+        for (j = 0; j < size; j++) {
+            if (maxArray[j] <= matNum[y][j]) {
+                maxArray[j] = matNum[y][j];
+            } else {
+                isRuling = false;
+            }
+        }
+        if (isRuling) {
+            counter++;
+        }
+    }
+
+    return counter;
+}
+
+//  2015 question 4.1
+void arrangeArrays(int data1[], int data2[], int size) {
+    if (size == 0) {
+        return;
+    }
+
+    if (data1[size - 1] > data2[size - 1]) {
+        swapInArrays(data1, data2, size - 1);
+    }
+    arrangeArrays(data1, data2, size - 1);
+}
+
+void swapInArrays(int array1[], int array2[], int index) {
+    int tmp = array1[index];
+    array1[index] = array2[index];
+    array2[index] = tmp;
+}
+
+// 2015 question 4.2
+
+int gcd(int num1, int num2) {
+    int result = num1;
+    if (num1 == num2) {
+        return result;
+    }
+    if (num1 > num2) {
+        result = gcd(num2, num1 - num2);
+    } else {
+        result = gcd(num1, num2 - num1);
+    }
+    return result;
 }
