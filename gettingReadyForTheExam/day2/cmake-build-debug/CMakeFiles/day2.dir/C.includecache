@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ariell/Education/intro-to-c/gettingReadyForTheExam/day2/main.c
+stdio.h
+-
+stdbool.h
+-
+string.h
+-
+
