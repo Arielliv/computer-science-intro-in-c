@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/ariell/Education/intro-to-c/gettingReadyForTheExam/day2/main.c
+/Users/ariell/Education/intro-to-c/gettingReadyForTheExam/day4/main.c
 stdio.h
 -
-stdbool.h
+math.h
 -
 string.h
 -
-math.h
+stdbool.h
 -
 

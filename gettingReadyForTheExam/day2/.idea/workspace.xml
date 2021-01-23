@@ -29,7 +29,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ec397a8-e85f-465e-b8a6-22ee594cab98" name="Default Changelist" comment="" />
+    <list default="true" id="0ec397a8-e85f-465e-b8a6-22ee594cab98" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/day2.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/day2.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/day2.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/day2.dir/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/day2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/day2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,11 +68,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="day2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="day2" TARGET_NAME="day2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="day2" RUN_TARGET_NAME="day2">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -86,6 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611217686032</updated>
       <workItem from="1611217687472" duration="11040000" />
+      <workItem from="1611418925148" duration="1332000" />
     </task>
     <servers />
   </component>
@@ -102,47 +105,48 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="406" key="GridCell.Tab.0.bottom" timestamp="1611316129620">
+    <state width="1638" height="346" key="GridCell.Tab.0.bottom" timestamp="1611426556725">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129620" />
+    <state width="1638" height="346" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556725" />
     <state width="1878" height="445" key="GridCell.Tab.0.bottom/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254542002" />
-    <state width="1878" height="406" key="GridCell.Tab.0.center" timestamp="1611316129619">
+    <state width="1638" height="346" key="GridCell.Tab.0.center" timestamp="1611426556725">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129619" />
+    <state width="1638" height="346" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556725" />
     <state width="1878" height="445" key="GridCell.Tab.0.center/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254542002" />
-    <state width="1878" height="406" key="GridCell.Tab.0.left" timestamp="1611316129619">
+    <state width="1638" height="346" key="GridCell.Tab.0.left" timestamp="1611426556724">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129619" />
+    <state width="1638" height="346" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556724" />
     <state width="1878" height="445" key="GridCell.Tab.0.left/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254542001" />
-    <state width="1878" height="406" key="GridCell.Tab.0.right" timestamp="1611316129620">
+    <state width="1638" height="346" key="GridCell.Tab.0.right" timestamp="1611426556725">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129620" />
+    <state width="1638" height="346" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556725" />
     <state width="1878" height="445" key="GridCell.Tab.0.right/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254542002" />
-    <state width="1878" height="406" key="GridCell.Tab.1.bottom" timestamp="1611316129621">
+    <state width="1638" height="346" key="GridCell.Tab.1.bottom" timestamp="1611426556726">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129621" />
+    <state width="1638" height="346" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556726" />
     <state width="1878" height="406" key="GridCell.Tab.1.bottom/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254536007" />
-    <state width="1878" height="406" key="GridCell.Tab.1.center" timestamp="1611316129620">
+    <state width="1638" height="346" key="GridCell.Tab.1.center" timestamp="1611426556725">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129620" />
+    <state width="1638" height="346" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556725" />
     <state width="1878" height="406" key="GridCell.Tab.1.center/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254536006" />
-    <state width="1878" height="406" key="GridCell.Tab.1.left" timestamp="1611316129620">
+    <state width="1638" height="346" key="GridCell.Tab.1.left" timestamp="1611426556725">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129620" />
+    <state width="1638" height="346" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556725" />
     <state width="1878" height="406" key="GridCell.Tab.1.left/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254536006" />
-    <state width="1878" height="406" key="GridCell.Tab.1.right" timestamp="1611316129621">
+    <state width="1638" height="346" key="GridCell.Tab.1.right" timestamp="1611426556725">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1878" height="406" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1611316129621" />
+    <state width="1638" height="346" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1611426556725" />
     <state width="1878" height="406" key="GridCell.Tab.1.right/1680.-127.1920.1177/0.23.1680.1027@1680.-127.1920.1177" timestamp="1611254536007" />
   </component>
 </project>

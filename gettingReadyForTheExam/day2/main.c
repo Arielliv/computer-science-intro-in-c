@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include <math.h>
 
 #define ROWS 256
 #define COLS 100
@@ -19,7 +20,12 @@ bool findXneigh(int data[], int size, int x);
 
 void cpUpper(char str[], char strUpper[]);
 
+
+
 void main() {
+
+
+
     int result;
     char mat[ROWS][COLS] = {{'a', 'b', 'c', 'd', '\0'},
                             {'a', 'b', 'a', '\0'},
@@ -179,3 +185,6 @@ void cpUpper(char str[], char strUpper[]) {
     }
     cpUpper(str + 1, strUpper);
 }
+
+
+
