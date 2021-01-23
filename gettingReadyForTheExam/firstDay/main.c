@@ -82,6 +82,14 @@ void main() {
 
     printf("\n%d", gcd(24, 36));
     printf("\n%d", gcd(12, 17));
+    int a = 2;
+    int b = 3;
+    printf("\na: %d",a);
+    printf("\nb: %d",b);
+    swap(&a, &b);
+    printf("\na: %d",a);
+    printf("\nb: %d",b);
+
 }
 
 int binarySearchRecursive(int *array, int value, int left, int right) {
@@ -116,10 +124,10 @@ int binarySearchIterative(int *array, int size, int value) {
 }
 
 void swap(int *value1, int *value2) {
-    int *tmp;
-    tmp = value1;
+    int tmp;
+    tmp = *value1;
     *value1 = *value2;
-    *value2 = *tmp;
+    *value2 = tmp;
 }
 
 void mergeSort(int *array, int size) {
